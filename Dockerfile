@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN apt-get update -y
-RUN apt-get install wget build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install wget build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev -y
 WORKDIR /opt/
 RUN wget https://github.com/bitcore-btx/BitCore/releases/download/0.90.9.10/bitcore-x86_64-linux-gnu_qt5_with-libs.tar.gz
 RUN tar zxvf bitcore-x86_64-linux-gnu_qt5_with-libs.tar.gz
